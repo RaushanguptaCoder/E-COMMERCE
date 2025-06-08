@@ -10,6 +10,7 @@ import FAQ from "./components/FAQ";
 import Categories from "./components/Categories";
 import Login from "./components/Login";
 import Cart from "./components/Cart";
+import groceryLogo from "./assets/groceries.png"; // <-- Add this import
 
 const App = () => {
   // let login = false;
@@ -29,16 +30,78 @@ const App = () => {
           <Route path="/Cart" element={<Cart />} />
         </Routes>
       </Router>
-    <footer className="bg-blue-100 text-gray-700 py-6 mt-8">
-        <div className="max-w-2xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-          <div className="mb-2 md:mb-0 text-center md:text-left">
-            <span className="font-bold text-blue-600 text-lg">Ecomm</span> &copy; {new Date().getFullYear()}<br />
-            Your trusted online shopping partner.
+    <footer className="bg-gray-50 border-t border-gray-200 pt-10 pb-2 px-4 mt-10">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center gap-10 text-center">
+          {/* Brand and Description */}
+          <div className="flex-1 min-w-[220px] flex flex-col items-center">
+            <div className="font-extrabold text-2xl text-black mb-2 flex flex-col items-center">
+              <img
+                src={groceryLogo}
+                alt="Grocery Mart Logo"
+                className="w-14 h-14 mb-2 "
+              />
+              Daily<span className="text-blue-600">Needs</span>
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Your trusted destination for seamless online shopping. We're
+              committed to quality, convenience, and customer satisfaction —
+              bringing you the best products, fast delivery, and reliable
+              service every step of the way.
+            </p>
           </div>
-          <div className="text-center md:text-right text-sm">
-            <div>Email: support@ecomm.com</div>
-            <div>Phone: +1 234 567 8901</div>
-            <div>123 Ecomm Street, Shop City, Country</div>
+          {/* Address */}
+          <div className="flex-1 min-w-[180px] flex flex-col items-center">
+            <div className="font-bold text-md text-black mb-2">Address</div>
+            <p className="text-gray-600 text-sm">
+              Sector 136, Sovergein Tower
+              <br />
+              6th Floor
+              <br />
+              Noida, Uttar Pradesh
+            </p>
+          </div>
+          {/* Links */}
+          <div className="flex-1 min-w-[120px] flex flex-col items-center">
+            <div className="font-bold text-md text-black mb-2">Links</div>
+            <ul className="text-gray-600 text-sm space-y-1">
+              <li>
+                <a href="#" className="hover:text-blue-600">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-600">
+                  Review
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-600">
+                  Cart
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-600">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-600">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center border-t border-gray-200 mt-8 pt-4 text-xs text-gray-500 text-center gap-2">
+          <div>© 2025 Daily Needs| All Rights Reserved</div>
+          <div className="space-x-4 mt-2 md:mt-0">
+            <a href="#" className="hover:text-blue-600">
+              Privacy Policy
+            </a>
+            <span>|</span>
+            <a href="#" className="hover:text-blue-600">
+              Terms of Service
+            </a>
           </div>
         </div>
       </footer>
