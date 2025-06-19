@@ -17,6 +17,9 @@ const Nav = () => {
           </span>
         </Link>
         <div className="flex space-x-6">
+          <Link to="/Home" className="text-gray-900 font-bold hover:text-blue-600 transition cursor-pointer">
+            Home
+          </Link>
           <Link to="/contact" className="text-gray-900 font-bold hover:text-blue-600 transition cursor-pointer">
             Contact us
           </Link>

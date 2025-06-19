@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Review from "./components/Review";
+import Wishlist from "./components/Wishlist";
 import FAQ from "./components/FAQ";
 import Categories from "./components/Categories";
 import Login from "./components/Login";
@@ -21,6 +22,8 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Wishlist" element={<Wishlist />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/review" element={<Review />} />
